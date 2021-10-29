@@ -1,4 +1,4 @@
-# Checkout single product
+# 2C2P Demo 
 
 ## Requirements
 
