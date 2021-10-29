@@ -23,8 +23,7 @@
           <h3>강아지 - Doggy</h3>
           <h5>5만원 - \50,000</h5>
         </div>
-      </div>
-      <form action="">
+      </div>     
         <div class="dropdown dr1">
           <button
             class="btn btn-secondary dropdown-toggle"
@@ -59,15 +58,14 @@
                 <!-- 0 = CC / 1 = QRC / 2 = CSQR / 3 = QRC / 4 = WEBPAY / 5 = EWALLET / 6 = IBANK -->
               <li><a class="dropdown-item" href="#">글로벌 카드 결제 - CC</a></li>
               <li><a class="dropdown-item" href="#">QR 결제 - QRC (AliPay / WeChat)</a></li>
-              <li><a class="dropdown-item" href="#">QR 결제 - CSQR (AMEX / Visa / Master Card / JCB)</a></li>
+              <li><a class="dropdown-item" href="#">QR 결제 - CSQR (AMEX / Visa / Master Card ...)</a></li>
               <li><a class="dropdown-item" href="#">QR 결제 - QRC (GrabPay)</a></li>
               <li><a class="dropdown-item" href="#">인터넷 결제 - WEBPAY</a></li>
               <li><a class="dropdown-item" href="#">디지털 결제 - EWALLET</a></li>
               <li><a class="dropdown-item" href="#">인터넷 뱅킹 - IBANK</a></li>
             </ul>
           </div>
-        <button type="submit" id="checkout-button" data-bs-toggle="modal" data-bs-target="#myModal">구매</button>
-      </form>
+        <button type="button" id="checkout-button" data-bs-toggle="modal" data-bs-target="#myModal">구매</button>      
     </section>
     <div class="modal" tabindex="-1" id="myModal">
         <div class="modal-dialog modal-dialog-centered">
@@ -77,7 +75,9 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <button type="button" class="btn btn-primary">2C2P</button>
+            <form action="/generateJWTtoken" method="POST">
+                <button type="submit" class="btn btn-primary">2C2P</button>
+            </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>              
